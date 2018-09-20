@@ -1,0 +1,50 @@
+body {
+  background: #20262E;
+  font-family: aerial;
+  font-size: 14px;
+  padding: 20px;
+}
+body div.container {
+  margin-top: 1px;
+}
+body div.container div.year {
+  background: #ddd;
+  padding: 5px;
+  box-shadow: 1px 1px #ccc;
+}
+body div.container div.month-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #0091EA;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+body div.container div.month-container span.month {
+  flex-grow: 1;
+  width: 40px;
+  line-height: 40px;
+  height: 40px;
+  vertical-align: middle;
+  text-align: center;
+}
+body div.container div.month-container span.month.selected {
+  background: #0091EA;
+  border-radius: 50%;
+}
+body div.container div.collapsed {
+  display: none;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 5px;
+  max-height: 200px;
+  max-width: 275px;
+  transition: all 0.2s;
+  overflow-y: scroll;
+}
+
+/*# sourceMappingURL=style.css.map */
