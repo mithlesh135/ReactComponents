@@ -1,18 +1,12 @@
-body {
-  background: #20262E;
-  font-family: aerial;
-  font-size: 14px;
-  padding: 20px;
-}
-body div.container {
+div.container {
   margin-top: 1px;
 }
-body div.container div.year {
+div.container div.year {
   background: #ddd;
   padding: 5px;
   box-shadow: 1px 1px #ccc;
 }
-body div.container div.month-container {
+div.container div.month-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -21,7 +15,7 @@ body div.container div.month-container {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-body div.container div.month-container span.month {
+div.container div.month-container span.month {
   flex-grow: 1;
   width: 40px;
   line-height: 40px;
@@ -29,22 +23,47 @@ body div.container div.month-container span.month {
   vertical-align: middle;
   text-align: center;
 }
-body div.container div.month-container span.month.selected {
+div.container div.month-container span.month.selected {
   background: #0091EA;
   border-radius: 50%;
 }
-body div.container div.collapsed {
+div.container div.collapsed {
   display: none;
 }
 
-#app {
-  background: #fff;
-  border-radius: 4px;
-  padding: 5px;
-  max-height: 200px;
-  max-width: 275px;
-  transition: all 0.2s;
-  overflow-y: scroll;
+table.date-picker thead {
+  border-bottom: 1px solid #ddd;
+}
+table.date-picker thead tr {
+  height: 50px;
+}
+table.date-picker thead tr th {
+  text-align: center;
+  text-align: center;
+}
+table.date-picker thead tr th div {
+  margin: 5px;
+  width: 30px;
+  line-height: 20px;
+}
+table.date-picker tbody tr td {
+  text-align: center;
+}
+table.date-picker tbody tr td div {
+  margin: 5px;
+  width: 30px;
+  line-height: 20px;
+}
+table.date-picker tbody tr td.disabled {
+  pointer-events: none;
+}
+table.date-picker tbody tr td.disabled div {
+  background: #ddd;
+  color: #aaa;
+}
+table.date-picker tbody tr td.selected div {
+  background: #0091EA;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

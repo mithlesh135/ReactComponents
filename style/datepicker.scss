@@ -1,0 +1,45 @@
+@import "var";
+
+table.date-picker {
+    thead {
+      border-bottom: 1px solid $disabled-color;
+      tr {
+        height: 50px;
+        th {
+          text-align: center;
+          div {
+            margin: 5px;
+            width: 30px;
+            line-height: 20px;
+          }
+          text-align: center;
+        }
+      }
+    }
+    
+    tbody {
+      tr {
+        td {
+          text-align: center;
+          div {
+            margin: 5px;
+            width: 30px;
+            line-height: 20px;
+          }
+          &.disabled {
+            pointer-events: none;
+            div {
+              background: $disabled-color;
+              color: $disabled-font-color;
+            }
+          }
+          &.selected {
+            div {
+              background: $selection-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
