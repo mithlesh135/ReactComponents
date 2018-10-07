@@ -66,4 +66,26 @@ table.date-picker tbody tr td.selected div {
   color: #fff;
 }
 
+.month-picker-material {
+  padding: 10px;
+}
+.month-picker-material tr {
+  height: 40px;
+  width: 400px;
+}
+.month-picker-material .month {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 800px;
+}
+.month-picker-material .month:hover {
+  background: #eee;
+}
+.month-picker-material .month.selected {
+  background: #0091EA;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
