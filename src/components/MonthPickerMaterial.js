@@ -16,6 +16,12 @@ class MonthPickerMaterial extends Component {
 
         this.onMonthSelected = this.onMonthSelected.bind(this);
     }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.month !== this.state.month) {
+          this.setState({ startTime: nextProps.month });
+        }
+      }
     
     getCurrentMonth() {
         return this.state.month;
@@ -67,5 +73,4 @@ class MonthPickerMaterial extends Component {
         </table>)
     }
 }
-
 export default MonthPickerMaterial;
