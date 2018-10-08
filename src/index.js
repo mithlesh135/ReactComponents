@@ -6,4 +6,4 @@ import MonthPickerMaterial from './components/MonthPickerMaterial';
 
 
 
-ReactDOM.render(<MonthPickerMaterial />, document.querySelector('div.container'));
+ReactDOM.render(<MonthPickerMaterial month="12" />, document.querySelector('div.container'));

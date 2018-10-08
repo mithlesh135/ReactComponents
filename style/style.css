@@ -88,4 +88,15 @@ table.date-picker tbody tr td.selected div {
   color: #fff;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: "Helvetica Neue Light", "Helvetica Neue";
+  font-size: 0.7rem !important;
+}
+
 /*# sourceMappingURL=style.css.map */

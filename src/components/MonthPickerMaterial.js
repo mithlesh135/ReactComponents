@@ -28,35 +28,35 @@ class MonthPickerMaterial extends Component {
     }
 
     onMonthSelected(month) {
-        this.setState({
-            month
-        });
+        this.setState({month});
         this.props.onMonthSelected && this.props.onMonthSelected(month);
     }
     
-    getRowMarkup(i) {
-        let months = this.months.slice(i * this.noOfColumns, i * this.noOfColumns + this.noOfColumns);
+    getRowMarkup(row) {
+        const currentRow = row * this.noOfColumns;
+        const itemsToSlice = currentRow + this.noOfColumns;
+
+        let months = this.months.slice(currentRow, itemsToSlice);
         return months.map((month, index) => {
             let classes = 'month';
-            let currentMonth = (i * this.noOfColumns + index);
+            let currentMonth = (currentRow + index);
             
             if(currentMonth == this.getCurrentMonth()) {
-                classes = classes + " selected";
+                classes = `${classes} selected`;
             }
-            return (<td key={month}> <div onClick={() => this.onMonthSelected(currentMonth)} className={classes}>{month}</div></td>);
+            return (<td key={month}> 
+                <div 
+                    onClick={() => this.onMonthSelected(currentMonth)} 
+                    className={classes}>{month}
+                </div>
+            </td>);
         });
     }
 
     getMonthMarkup() {
         let markup = [];
         for(let i = 0; i < 12/this.noOfColumns; i++) {
-            markup.push(
-                <tr key={i}>
-                    {
-                        this.getRowMarkup(i)
-                    }
-                </tr>
-            );
+            markup.push(<tr key={i}>{this.getRowMarkup(i)}</tr>);
         }
         return markup;
     }
@@ -65,10 +65,7 @@ class MonthPickerMaterial extends Component {
         return (<table className='month-picker-material'>
             <thead>
             </thead>
-            <tbody>
-                {
-                    this.getMonthMarkup()
-                }
+            <tbody>{this.getMonthMarkup()}
             </tbody>
         </table>)
     }
