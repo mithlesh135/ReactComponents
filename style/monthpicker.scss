@@ -1,36 +1,36 @@
 @import "var";
 
-div.container {
-    margin-top: 1px;
-    div.year {
-      background: $year-box-color; 
-      padding: 5px;
-      box-shadow: 1px 1px $shadow-color;
-    }
+// div.container {
+//     margin-top: 1px;
+//     div.year {
+//       background: $year-box-color; 
+//       padding: 5px;
+//       box-shadow: 1px 1px $shadow-color;
+//     }
     
-    div.month-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      border: 1px solid $selection-color;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      span.month {
-        flex-grow: 1;
-        width: 40px;
-        line-height: 40px;
-        height: 40px;
-        vertical-align: middle;
-        text-align: center;
-        &.selected {
-          background: $selection-color;
-          border-radius: 50%;
-        }
-      }
-    }  
-    div.collapsed {
-      display: none;
-    }
-  }
+//     div.month-container {
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       border: 1px solid $selection-color;
+//       padding-top: 5px;
+//       padding-bottom: 5px;
+//       span.month {
+//         flex-grow: 1;
+//         width: 40px;
+//         line-height: 40px;
+//         height: 40px;
+//         vertical-align: middle;
+//         text-align: center;
+//         &.selected {
+//           background: $selection-color;
+//           border-radius: 50%;
+//         }
+//       }
+//     }  
+//     div.collapsed {
+//       display: none;
+//     }
+//   }
 

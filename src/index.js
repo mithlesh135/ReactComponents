@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import MonthPicker from './components/MonthPicker';
 import DatePicker from './components/DatePicker';
 import MonthPickerMaterial from './components/MonthPickerMaterial';
+import YearPicker from './components/YearPicker';
 
 
 
-ReactDOM.render(<MonthPickerMaterial month="12" />, document.querySelector('div.container'));
+ReactDOM.render(<YearPicker />, document.querySelector('div.container'));

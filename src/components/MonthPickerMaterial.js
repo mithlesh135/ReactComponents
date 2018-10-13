@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 class MonthPickerMaterial extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            month: this.props.month - 1 || new Date().getMonth()
+            month: parseInt(this.props.month, 10) - 1 || new Date().getMonth()
         }
 
         this.noOfColumns = 4;
@@ -19,7 +18,7 @@ class MonthPickerMaterial extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.month !== this.state.month) {
-          this.setState({ startTime: nextProps.month });
+          this.setState({ startTime: parseInt(nextProps.month, 10)});
         }
       }
     
@@ -41,7 +40,7 @@ class MonthPickerMaterial extends Component {
             let classes = 'month';
             let currentMonth = (currentRow + index);
             
-            if(currentMonth == this.getCurrentMonth()) {
+            if(currentMonth === this.getCurrentMonth()) {
                 classes = `${classes} selected`;
             }
             return (<td key={month}> 
@@ -65,7 +64,8 @@ class MonthPickerMaterial extends Component {
         return (<table className='month-picker-material'>
             <thead>
             </thead>
-            <tbody>{this.getMonthMarkup()}
+            <tbody>
+                {this.getMonthMarkup()}
             </tbody>
         </table>)
     }

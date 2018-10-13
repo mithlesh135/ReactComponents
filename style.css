@@ -33,28 +33,6 @@ table.date-picker tbody tr td.selected div {
   color: #fff;
 }
 
-.year-picker {
-  padding: 10px;
-}
-.year-picker tr {
-  height: 40px;
-  width: 400px;
-}
-.year-picker .year {
-  width: 60px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  border-radius: 800px;
-}
-.year-picker .year:hover {
-  background: #eee;
-}
-.year-picker .year.selected {
-  background: #0091EA;
-  color: #fff;
-}
-
 .month-picker-material {
   padding: 10px;
 }
