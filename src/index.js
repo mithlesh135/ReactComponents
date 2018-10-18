@@ -7,9 +7,9 @@ import YearPicker from './components/YearPicker';
 import DateComponent from './components/DateComponent';
 
 
-ReactDOM.render(<div>
-    {/* <DatePicker />
-    <MonthPickerMaterial />
-    <YearPicker /> */}
-    <DateComponent />
-</div>, document.querySelector('div.container'));
+ReactDOM.render(<DateComponent>
+        <DatePicker />
+        <MonthPickerMaterial />
+        <YearPicker />
+    </DateComponent>
+, document.querySelector('div.container'));

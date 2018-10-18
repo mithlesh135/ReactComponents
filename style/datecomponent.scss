@@ -1,0 +1,55 @@
+@import "var";
+
+.date-component {
+    box-shadow: 0 2px 4px rgba( #000000, 0.2);
+    max-height: 300px;
+    max-width: 310px;
+   
+    padding: 10px;
+    .month-picker-material {
+        display: none
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .year-picker {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .chevrons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 75%;
+    }
+
+    .toggle {
+        display: inline-block;
+        width: 25%;
+    }
+
+    .child-body {
+        position: relative;
+        min-height: 300px;
+        min-width: 310px;
+        table {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
